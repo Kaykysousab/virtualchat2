@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Equipe CETI Nossa Senhora do Patrocínio">
+    <link rel="stylesheet" href="./estilo/estiloAten.css">
+    <title>Conselheiro Virtual</title>
+    <link rel="icon" href="./img/icone.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="centraliza">
+    <form id="formulario" class="formulario" action="https://formspree.io/f/myyrbreo" method="POST" onsubmit="return validarFormulario()">
+        <h2>Conselheiro Virtual</h2>
+        <br>
+        <h3>Solicitação de Atendimento Presencial</h3>
+        <div class="form-V">
+            <div>
+                <br>
+                <label for="Nome">Nome:</label>
+                <input type="text" id="nome" name="Nome">
+            </div>
+            <div>
+                <br>
+                <label for="WhatsApp">WhatsApp:</label>
+                <input type="Numero" id="Numero" name="Número">
+            </div>
+            <div>
+                <br>
+                <label for="gre">GRE:</label>
+                <select id="gre" name="gre">
+                    <option value="16ª GRE">16ª GRE</option>
+                </select>
+            </div>
+            <div>
+                <br>
+                <label for="colegio">Colégio:</label>
+                <select id="colegio" name="colegio">
+                    <option value="CETI Nossa Senhora do Patrocínio">CETI Nossa Senhora do Patrocínio</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-H">
+            <button class="send-button" type="submit">Solicitar Atendimento Presencial</button>
+            <button class="send-button" type="button" onclick="cancelar()">Cancelar</button>
+        </div>
+    </form>
+</div>
+    <script>
+        function validarFormulario() {
+            var nome = document.getElementById("nome").value;
+            var numero = document.getElementById("Numero").value;
+            
+            // Verifica se os campos estão vazios
+            if (nome === "" || numero === "") {
+                alert("Por favor, preencha todos os campos.");
+                return false; // Impede o envio do formulário
+            }
+            
+            return true; // Permite o envio do formulário se todos os campos estiverem preenchidos
+        }
+        
+        function cancelar() {
+            window.location.href = "https://conselheirovirtual.netlify.app/";
+        }
+    </script>
+</body>
+</html>

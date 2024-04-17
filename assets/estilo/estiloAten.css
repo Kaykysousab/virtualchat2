@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 32px;
+}
+h3 {
+   font-size: 23px;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    background-color: #F2E8D7;
+}
+.send-button {
+    margin-top: 38px;
+    background-color: #7FB3D5;
+    color: #000000; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px #000000;
+    font-size: 15px;
+}
+.send-button:hover {
+    background-color: #94d2d4;
+}
+#nome{
+    width: 200px;
+}
+
+.centraliza {
+    border-radius: 5%;
+    width: 400px;
+    height: 600px;
+    border: 4px solid #000000;
+    align-items: center;
+    margin: 100px auto;
+    display: flex;
+}
+
+.formulario{
+   text-align: center;
+}
+
+#nome, #Numero, #gre, #colegio  {
+    border: none;
+    border-radius: 5%;
+    border-bottom: 3px solid #000000;
+    background-color: transparent;
+    padding: 10px 20px;
+}
+
+
+@media screen and (max-width: 590px) {
+
+    .centraliza {
+        width: 350px;
+        height: 600px;
+    }
+
+    .form-H {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .send-button {
+        margin-top: 6%;
+        background-color: #7FB3D5;
+        color: #000000; 
+        padding: 15px 20px;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        font-size: 16px;
+        justify-content: space-around; 
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
